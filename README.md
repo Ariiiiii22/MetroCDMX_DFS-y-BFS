@@ -1,20 +1,18 @@
-# MetroCDMX_DFS-y-BFS
+# Metro CDMX: DFS, BFS y Hill Climbing
+Modelado del Metro de la CDMX como un grafo (estación = estado, moverse a una estación vecina = acción, costo unitario = 1) usando el esquema visto en clase: `Problem`, `GraphProblem`, `Node`.
 
-Modelado del Metro de la CDMX como un grafo (estación = estado, moverse a una estación vecina = acción, costo unitario = 1) usando lo visto en clase:
-`Problem`, `GraphProblem`, `Node`, `depth_first_graph_search` y `breadth_first_graph_search`.
-
-Rutas requeridas:
+Rutas:
 1. Cuatro Caminos -> Pantitlán
 2. Politécnico -> Tasqueña
 3. Zapata -> Oceanía
 
-## Cómo ejecutarlo
-Abre `Metro_DFS_BFS.ipynb` en Google Colab y ejecuta todas las celdas (`Entorno de ejecución > Ejecutar todo`).
+## Abrir en Google Colab > Entorno de ejecución > Ejecutar todo
+- `Metro_DFS_BFS.ipynb`: búsqueda en profundidad y en anchura.
+- `Metro_HillClimbing.ipynb`: Hill Climbing con heurística = distancia en línea recta (km) a la estación meta, usando coordenadas aproximadas de las estaciones.
 
-## Resultados (costo = número de kilometros)
-| Ruta | DFS | BFS |
-|---|---|---|
-| Cuatro Caminos -> Pantitlán | 18 | 18 |
-| Politécnico -> Tasqueña | 46 | 20 |
-| Zapata -> Oceanía | 53 | 13 |
-
+## Resultados (costo = número de kilomotros)
+| Ruta | DFS | BFS | Hill Climbing |
+|---|---|---|---|
+| Cuatro Caminos -> Pantitlán | 18 | 18 | 22 |
+| Politécnico -> Tasqueña | 46 | 20 | 20 |
+| Zapata -> Oceanía | 53 | 13 | atascado en Canal del Norte |
